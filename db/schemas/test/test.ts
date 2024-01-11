@@ -1,8 +1,8 @@
-import {mysqlSchema, serial, text} from 'drizzle-orm/mysql-core'
+import {serial, text, mysqlTableCreator} from 'drizzle-orm/mysql-core'
 
-export const testSchema = mysqlSchema("test")
+const testTableCreator= mysqlTableCreator((table_name)=>`test_${table_name}`)
 
-export const testTable = testSchema.table("test", {
+export const testTable = testTableCreator("test", {
     id: serial('id').primaryKey(),
     message: text('message'),
     })
