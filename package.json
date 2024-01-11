@@ -12,5 +12,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@planetscale/database": "^1.13.0",
+    "drizzle-orm": "^0.29.3"
+  }
 }
