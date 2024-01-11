@@ -1,12 +1,11 @@
 import 'dotenv/config'
 import { drizzle } from "drizzle-orm/planetscale-serverless";
 import { connect } from "@planetscale/database";
+// import { drizzle } from "drizzle-orm/mysql2";
+// import mysql from "mysql2/promise";
 
-// create the connection
-const connection = connect({
-  host: process.env.DATABASE_HOST,
-  username: process.env.DATABASE_USERNAME,
-  password: process.env.DATABASE_PASSWORD,
-});
 
-const db = drizzle(connection);
+const connection = connect({url: process.env.DATABASE_URI});
+// const connection = await mysql.createConnection(process.env.DATABASE_URI);
+
+export const db = drizzle(connection);
