@@ -9,7 +9,7 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db:push": "drizzle-kit push:mysql --config=drizzle.config.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
   "dependencies": {
     "@planetscale/database": "^1.13.0",
     "dotenv": "^16.3.1",
-    "drizzle-orm": "^0.29.3"
+    "drizzle-orm": "^0.29.3",
+    "mysql2": "^3.7.0"
   }
 }
